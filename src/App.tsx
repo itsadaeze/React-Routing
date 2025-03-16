@@ -1,25 +1,28 @@
+
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Import Navigate
+import { AuthProvider } from './context/authcontext';
+import { Login } from './pages/login';
+import { Dashboard } from './pages/dashboard';
+import { Profile } from './pages/profile';
+import { Settings } from './pages/settings';
+import { PrivateRoute } from './components/privateroute';
+import { Navbar } from './components/navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        <Routes> {/* Use Routes instead of Switch */}
+          <Route path="/login" element={<Login />} /> {/* Use element prop */}
+          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+          <Route path="/settings" element={<PrivateRoute adminOnly><Settings /></PrivateRoute>} />
+          <Route path="/" element={<Navigate to="/login" replace />} /> {/* Use Navigate */}
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
