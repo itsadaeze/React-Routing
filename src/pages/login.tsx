@@ -22,12 +22,15 @@ export const Login: React.FC = () => {
     <div className='logincontainer'>
       <h2 >Login</h2>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="text" id='username'> Username</label>
         <input
+        id='text'
           type="text"
-          placeholder="Username"
+          placeholder="Enter your Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        <label htmlFor="select" id='username'> Role</label>
         <select value={role} onChange={(e) => setRole(e.target.value as 'Admin' | 'Editor' | 'Viewer')}>
           <option value="Admin">Admin</option>
           <option value="Editor">Editor</option>

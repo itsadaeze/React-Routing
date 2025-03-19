@@ -1,48 +1,61 @@
-
+body{
+  margin: auto;
+}
 .logincontainer{
-    width:  30%;
-    margin: 10rem auto 0 ;
-    border: 2px solid black;
+    width:  27%;
+    margin: 20rem auto 0;
     border-radius: 10px;
     text-align: center;
-    
+    background: white;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0, 0.3);
 }
 
 h2{
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 40px;
 }
- form{
+form{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 5px 30px;
+}
+ #username{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(86, 85, 85);
  }
 input{
-    padding:  10px  ;
-    margin-bottom: 13px;
-    border-radius: 5px;
+    padding:  12px  ;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid rgb(228, 228, 228);
 }
 select {
-      padding:  10px  ;
-    margin-bottom: 13px;
-    border-radius: 5px;
+    padding:  12px  ;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid rgb(228, 228, 228);
 }
 button {
-      padding:  10px  ;
-    margin-bottom: 13px;
-    background-color: rgb(25, 25, 244);
+    padding:  12px  ;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    background-color: rgb(43, 43, 247);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     color: white;
     font-size: small;
     font-weight: bold;
 }
 button:hover{
-    background-color: rgb(2, 2, 57);
+    background-color: rgb(3, 3, 129);
 }
 
 @media only screen  and (max-width:768px){
     .logincontainer{
-        width:  80%;
+        width:  90%;
+        margin: 10rem auto 0;
     } 
 }
