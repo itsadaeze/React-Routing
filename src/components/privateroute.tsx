@@ -1,6 +1,6 @@
-// src/components/PrivateRoute.tsx
+
 import React from 'react';
-import { Navigate, useLocation } from 'react-router-dom'; // Import Navigate and useLocation
+import { Navigate, useLocation } from 'react-router-dom'; 
 import { useAuth } from '../context/authcontext';
 
 interface PrivateRouteProps {
@@ -13,7 +13,7 @@ export const PrivateRoute: React.FC<PrivateRouteProps> = ({
   adminOnly = false,
 }) => {
   const { user } = useAuth();
-  const location = useLocation(); // Get current location
+  const location = useLocation(); 
 
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
@@ -23,5 +23,5 @@ export const PrivateRoute: React.FC<PrivateRouteProps> = ({
     return <Navigate to="/dashboard" replace />;
   }
 
-  return <>{children}</>; // Render the children if authorized
+  return <>{children}</>; 
 };

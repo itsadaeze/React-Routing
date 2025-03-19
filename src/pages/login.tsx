@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; // Import useNavigate and useLocation
+import { useNavigate, useLocation } from 'react-router-dom'; 
 import { useAuth } from '../context/authcontext';
 
 export const Login: React.FC = () => {
   const [username, setUsername] = useState('');
   const [role, setRole] = useState<'Admin' | 'Editor' | 'Viewer'>('Viewer');
   const { login } = useAuth();
-  const navigate = useNavigate(); // Use useNavigate
+  const navigate = useNavigate(); 
   const location = useLocation();
 
   const handleSubmit = (e: React.FormEvent) => {

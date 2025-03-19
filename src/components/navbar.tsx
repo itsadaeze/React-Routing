@@ -1,15 +1,15 @@
 
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useNavigate } from 'react-router-dom'; 
 import { useAuth } from '../context/authcontext';
 
 export const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
-  const navigate = useNavigate(); // Use useNavigate
+  const navigate = useNavigate(); 
 
   const handleLogout = () => {
     logout();
-    navigate('/login'); // Use navigate
+    navigate('/login'); 
   };
 
   if (!user) return null;

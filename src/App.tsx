@@ -14,12 +14,12 @@ function App() {
     <AuthProvider>
       <Router>
         <Navbar />
-        <Routes> {/* Use Routes instead of Switch */}
-          <Route path="/login" element={<Login />} /> {/* Use element prop */}
+        <Routes> 
+          <Route path="/login" element={<Login />} /> 
           <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
           <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
           <Route path="/settings" element={<PrivateRoute adminOnly><Settings /></PrivateRoute>} />
-          <Route path="/" element={<Navigate to="/login" replace />} /> {/* Use Navigate */}
+          <Route path="/" element={<Navigate to="/login" replace />} /> 
         </Routes>
       </Router>
     </AuthProvider>
