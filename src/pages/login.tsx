@@ -36,7 +36,7 @@ export const Login: React.FC = () => {
           <option value="Editor">Editor</option>
           <option value="Viewer">Viewer</option>
         </select>
-        <button type="submit">Login</button>
+        <button className='loginbtn' type="submit">Login</button>
       </form>
     </div>
   );
