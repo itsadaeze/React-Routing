@@ -40,3 +40,9 @@ button {
 button:hover{
     background-color: rgb(2, 2, 57);
 }
+
+@media only screen  and (max-width:768px){
+    .logincontainer{
+        width:  80%;
+    } 
+}
