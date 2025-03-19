@@ -1,9 +1,10 @@
 import React from 'react';
 import { useAuth } from '../context/authcontext';
+import { AdminDashboard } from './dashboard/admindashboard';
+import { EditorDashboard } from './dashboard/editordashboard';
+import { ViewerDashboard } from './dashboard/viewerdashboard';
 
-const AdminDashboard = () => <div>Admin Controls</div>;
-const EditorDashboard = () => <div>Content Editor Panel</div>;
-const ViewerDashboard = () => <div>Read-only Reports</div>;
+
 
 export const Dashboard: React.FC = () => {
   const { user } = useAuth();
