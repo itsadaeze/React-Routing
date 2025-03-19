@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom'; 
 import { useAuth } from '../context/authcontext';
+import './login.css'
 
 export const Login: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -18,8 +19,8 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className='logincontainer'>
+      <h2 >Login</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

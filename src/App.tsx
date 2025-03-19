@@ -8,9 +8,11 @@ import { Profile } from './pages/profile';
 import { Settings } from './pages/settings';
 import { PrivateRoute } from './components/privateroute';
 import { Navbar } from './components/navbar';
+import './App.css'
 
 function App() {
   return (
+    <div className='main-container'>
     <AuthProvider>
       <Router>
         <Navbar />
@@ -23,6 +25,7 @@ function App() {
         </Routes>
       </Router>
     </AuthProvider>
+    </div>
   );
 }
 
